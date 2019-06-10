@@ -77,9 +77,9 @@ function printQuote(quotes) {
     actualQuote += "<span class='citation'> " + random.citation + " </span>";
   }
   if (random.year) {
-    actualQuote += "<span class= 'year'> " + random.year + " </span></p>";
+    actualQuote += "<span class= 'year'> " + random.year + " </span>";
   }
-
+  "</p>";
   const resultColor = randomColor(); // Here I called my randomColor function that I created at the top of the code that allows a different color background when a new random quote appears.
 
   document.body.style.backgroundColor = resultColor;
