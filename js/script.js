@@ -71,13 +71,13 @@ function printQuote(quotes) {
   var actualQuote = ' ';
 
   actualQuote = "<p class='quote'> " + random.quote + " </p>";
-  actualQuote += "<p class='source'> " + random.source + " </p>";
-  actualQuote += "<h1 class= 'tags'> " + random.tags;  // I added a extra property to the objects of the array that contains a tags value. This value basically places each quote into a broader category that the quote itsself was derived from. 
+  actualQuote += "<p class='source'> " + random.source;
+    actualQuote += "<span class= 'tags'> " + random.tags;  // I added a extra property to the objects of the array that contains a tags value. This value basically places each quote into a broader category that the quote itsself was derived from. 
   if (random.citation) {
     actualQuote += "<span class='citation'> " + random.citation + " </span>";
   }
   if (random.year) {
-    actualQuote += "<span class= 'year'> " + random.year + " </span>";
+    actualQuote += "<span class= 'year'> " + random.year + " </span></p>";
   }
 
   const resultColor = randomColor(); // Here I called my randomColor function that I created at the top of the code that allows a different color background when a new random quote appears.
@@ -86,7 +86,7 @@ function printQuote(quotes) {
   document.getElementById('quote-box').innerHTML = actualQuote;
 
 }
-setInterval(printQuote, 20000); // I used the setInterval value in JS to place a timer on the web page that will reload the contents of the printQuote function every 20000 milliseconds or 20 seconds. 
+setInterval(printQuote, 5000); // I used the setInterval value in JS to place a timer on the web page that will reload the contents of the printQuote function every 20000 milliseconds or 20 seconds. 
 
 
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
