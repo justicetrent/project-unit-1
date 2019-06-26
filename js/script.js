@@ -86,7 +86,7 @@ function printQuote(quotes) {
   document.getElementById('quote-box').innerHTML = actualQuote;
 
 }
-setInterval(printQuote, 5000); // I used the setInterval value in JS to place a timer on the web page that will reload the contents of the printQuote function every 20000 milliseconds or 20 seconds. 
+setInterval(printQuote,5000); // I used the setInterval value in JS to place a timer on the web page that will reload the contents of the printQuote function every 20000 milliseconds or 20 seconds. 
 
 
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
